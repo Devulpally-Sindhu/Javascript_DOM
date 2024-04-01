@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="d1" border="2">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Salary</th>
+        </tr>
+    </table>
+    <script>
+        var people = [
+            {
+                "firstname": "praveen",
+                "lastname": "gubbala",
+                "age": 36,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 10000
+            },
+            {
+                "firstname": "srikanth",
+                "lastname": "gubbala",
+                "age": 32,
+                "gender": "male",
+                "city": "bengaluru",
+                "salary": 20000
+            },
+            {
+                "firstname": "pradeep",
+                "lastname": "reddy",
+                "age": 21,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 30000
+            },
+            {
+                "firstname": "mounika",
+                "lastname": "mudiraj",
+                "age": 20,
+                "gender": "female",
+                "city": "nalgonda",
+                "salary": 30000
+            },
+            {
+                "firstname": "nikhil",
+                "lastname": "m",
+                "age": 22,
+                "gender": "male",
+                "city": "guntur",
+                "salary": 2000
+            },
+            {
+                "firstname": "riya",
+                "lastname": "bhadouria",
+                "age": 14,
+                "gender": "female",
+                "city": "indore",
+                "salary": 40000
+            }
+        ];
+
+        //Display only the male people who are above the age of 25.
+        var x = document.getElementById('d1');
+        people.forEach(a => {
+            if (a.gender === "male" && a.age > 25) {
+                var trow = document.createElement('tr');
+                var fname = document.createElement('td');
+                fname.innerHTML = a.firstname;
+                trow.appendChild(fname)
+                var lname = document.createElement('td');
+                lname.innerHTML = a.lastname;
+                trow.appendChild(lname)
+                var gen = document.createElement('td');
+                gen.innerHTML = a.gender;
+                trow.appendChild(gen)
+                var age1 = document.createElement('td');
+                age1.innerHTML = a.age;
+                trow.appendChild(age1)
+                var city1 = document.createElement('td');
+                city1.innerHTML = a.city;
+                trow.appendChild(city1)
+                var sal = document.createElement('td');
+                sal.innerHTML = a.salary;
+                trow.appendChild(sal)
+                x.appendChild(trow)
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

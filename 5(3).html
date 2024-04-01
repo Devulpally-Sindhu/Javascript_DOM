@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="a1"></ul>
+    <script>
+        //Take an array of names and create a list from it.
+        var x=document.getElementById('a1');
+        var ar=["sindhu","managadevi","rajaram","keerthi","hanu","sanvi"];
+        for(var i=0;i<=ar.length-1;i++){
+            var y=document.createElement('li');
+            y.innerHTML=ar[i];
+            x.appendChild(y)
+        }
+
+
+
+    </script>
+</body>
+</html>

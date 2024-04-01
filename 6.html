@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="d1">
+
+    </ul>
+    <script>
+        var students = [
+            {
+                name: 'jaya',
+                gender: 'female',
+                place: 'gachibowli',
+            },
+            {
+                name: 'dasu',
+                gender: 'male',
+                place: 'kphb'
+            },
+            {
+                name: 'swati',
+                gender: 'female',
+                place: 'pune'
+            },
+            {
+                name: 'pallavi',
+                gender: 'female',
+                place: 'assam'
+            },
+            {
+                name: 'kiran',
+                gender: 'male',
+                place: 'kondapur'
+            },
+            {
+                name: 'thirumala',
+                gender: 'male',
+                place: 'madhapur'
+            },
+            {
+                name: 'priya',
+                gender: 'female',
+                place: 'hitech'
+            },
+        ]
+
+        var x=document.getElementById('d1')      
+        students.forEach(stu=>{
+            var a=document.createElement('li');
+            a.innerHTML=stu.name; 
+            if(stu.gender==="female"){
+                a.style.backgroundColor="blue"
+            }
+            else{
+                a.style.backgroundColor="pink"
+            }         
+            var b=document.createElement('ul');
+            var c=document.createElement('li')
+            c.innerHTML=stu.gender;
+            var d=document.createElement('li')
+            d.innerHTML=stu.place;
+            x.appendChild(a);
+            b.appendChild(c);
+            b.appendChild(d);
+            a.appendChild(b);
+        })
+
+        // students.forEach(function(value){
+        //     var a=document.createElement('li');
+        //     a.innerHTML=value.name;
+        //     if(value.gender==="female"){
+        //         a.style.backgroundColor="red"
+        //     }
+        //     if(value.gender==="male"){
+        //         a.style.backgroundColor="yellow"
+        //     }
+        //     var details=document.createElement('ul');
+        //     var genderli=document.createElement('li')
+        //     genderli.innerHTML=value.gender;
+        //     var placeli=document.createElement('li');
+        //     placeli.innerHTML=value.place;
+        //     details.appendChild(genderli);
+        //     details.appendChild(placeli);
+        //     a.appendChild(details)
+        //     document.getElementById('d1').appendChild(a)
+        // })
+        
+    </script>
+</body>
+
+</html>

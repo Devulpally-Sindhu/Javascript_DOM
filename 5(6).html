@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            /* display: inline-block; */
+            width: 300px;
+            height: 200px;
+            margin-left: 10px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">
+    </div>
+    <script>
+        var ar = ["https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=2000", "https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg6wDQQ2YZtCWNYaTFdijrPX8OlR-4VYFud49aWijW&s"]
+      
+        var x=document.getElementById('d1');
+        for(var i=0;i<=ar.length-1;i++){
+            var a=document.createElement('img');
+
+            a.src=ar[i]; 
+            x.appendChild(a)      
+
+        }
+        
+
+
+    </script>
+</body>
+
+</html>

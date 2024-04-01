@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol id="d1"></ol>
+    <script>
+        var students = [
+            {
+                "firstname": "praveen",
+                "age": 36,
+                "subjects": ['angular', 'nodejs', 'reactjs', 'java']
+            },
+            {
+                "firstname": "srikanth",
+                "age": 32,
+                "subjects": ['react', 'mongodb']
+            },
+            {
+                "firstname": "pradeep",
+                "age": 21,
+                "subjects": ['express', 'mongoose', 'python']
+            }
+        ]
+
+        // var x=document.getElementById('d1');
+        // students.forEach(a=>{
+        //     var b=document.createElement('li');
+        //     b.innerHTML=a.firstname;
+        //     var c=document.createElement('ol');
+        //     a.subjects.forEach(stu=>{
+        //         var d=document.createElement('li');
+        //         d.innerHTML=stu
+        //         c.appendChild(d);
+        //         b.appendChild(c);
+        //         x.appendChild(b)
+        //     })           
+        // })
+
+        var x=document.getElementById('d1');
+        for(var i=0;i<=students.length-1;i++){
+            var b=document.createElement('li');
+            b.innerHTML=students[i].firstname;
+            var c=document.createElement('ol');
+            for(var j=0;j<=students[i].subjects.length-1;j++){
+                var d=document.createElement('li');
+                d.innerHTML=students[i].subjects[j]
+                c.appendChild(d);
+                b.appendChild(c);
+                x.appendChild(b)
+            }
+           
+           
+
+        }
+      
+    </script>
+</body>
+
+</html>
