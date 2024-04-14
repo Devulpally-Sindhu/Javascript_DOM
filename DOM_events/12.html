@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            width="150px" onmousemove="a()">
+        <img src="https://getflowersdaily.com/wp-content/uploads/2022/02/WhatsApp-Image-2022-02-23-at-15.20.55-e1645610033607.jpeg"
+            width="150px" onmouseover="b()">
+        <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80" width="150px"
+            onmouseover="c()">
+        <div id="d1"></div>
+
+    </center>
+    <script>
+        function a() {
+            var x = document.getElementById('d1')
+            x.innerHTML = "";
+            var y = document.createElement('img');
+            y.style.width="300px"
+            y.src = "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+            x.appendChild(y)
+        }
+
+        function b() {
+            var x = document.getElementById('d1')
+            x.innerHTML = "";
+            var d = document.createElement('img');
+            d.style.width="300px"
+            d.src = "https://getflowersdaily.com/wp-content/uploads/2022/02/WhatsApp-Image-2022-02-23-at-15.20.55-e1645610033607.jpeg";
+            x.appendChild(d)
+
+        }
+
+        function c() {
+            var x = document.getElementById('d1')
+            x.innerHTML = "";
+            var e = document.createElement('img');
+            e.style.width="300px"
+            e.src = "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80";
+            x.appendChild(e)
+
+        }
+
+    </script>
+</body>
+
+</html>

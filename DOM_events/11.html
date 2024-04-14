@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1 style="color: red;">Show bulb on/off image using toggle button</h1>
+    </center>
+    <div>
+        <center>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScz6iLmFeAET-YA8PR_RNKQluBqMI-jfcukg&usqp=CAU"
+                id="d1">
+            <img src="https://www.shutterstock.com/image-vector/blub-vector-icon-bright-yellow-260nw-1981734986.jpg"
+                id="d2">
+            <br>
+            <button onclick="abc()" id="d3" style="background-color: orange;">ON</button>
+        </center>
+
+        <script>
+
+            // var x = document.getElementById("d3")
+            // x.innerHTML = "on"
+            // var y = document.getElementById("d1")
+            // y.style.display = "block"
+            // var z = document.getElementById("d2")
+            // z.style.display = "none"
+            // function abc() {
+            //     if (y.style.display == "block") {
+            //         z.style.display = "block"
+            //         y.style.display = "none"
+            //         x.innerHTML = "off"
+            //     }
+            //     else{
+            //         if (y.style.display == "none") {
+            //         y.style.display = "block"
+            //         z.style.display = "none"
+            //         x.innerHTML = "on"
+            //     }
+            //     }
+
+            // }
+
+            var x=document.getElementById('d3');
+            x.innerHTML="on";
+            var y=document.getElementById('d1');
+            y.style.display="block";
+            var z=document.getElementById('d2');
+            z.style.display="none";
+
+            function abc(){
+                if(y.style.display=="block"){
+                    z.style.display="block";
+                    y.style.display="none";
+                    x.innerHTML="off"
+                }
+                else{
+                    if(y.style.display=="none"){
+                        y.style.display="block";
+                        z.style.display="none";
+                        x.innerHTML="on"
+                    }
+                }
+            }
+
+
+
+
+        </script>
+
+
+
+
+    </div>
+</body>
+
+</html>

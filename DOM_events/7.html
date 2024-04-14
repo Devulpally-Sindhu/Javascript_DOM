@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="width: 250px;height: 200px;border:1px solid"><h1 id="d1">I am not Nothing</h1></div>
+    <br>
+    <br>
+    <button onclick="abc()">True/False</button>
+
+    <script>
+        var x=document.getElementById('d1')
+        function abc(){
+            if(x.innerHTML==="True"){
+                x.innerHTML="False"
+            }
+            else{
+                x.innerHTML="True"
+            }
+
+        }
+
+    </script>
+</body>
+</html>

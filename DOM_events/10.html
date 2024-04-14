@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1 style="color: red;">Change background color using toggle button</h1></center>
+    <center><div style="border: 1px solid red;width:150px;height: 150px;" id="d1"></div></center>
+    <br>
+    <center><button style="background-color: orange;" onclick="abc()">Toggle</button></center>
+
+    <script>
+        var x=document.getElementById('d1');
+        x.style.backgroundColor="white";
+
+        function abc(){
+            if(x.style.backgroundColor==="white"){
+                x.style.backgroundColor="yellow"
+            }
+            else{
+                x.style.backgroundColor="white"
+            }
+
+        }
+    </script>
+</body>
+</html>

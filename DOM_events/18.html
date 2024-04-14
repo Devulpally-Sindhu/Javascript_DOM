@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="color: red;">Add Contact Cards</h1>
+        <b style="color: red;">Name:</b>
+        <input type="text" id="d1">
+        <br>
+        <br>
+        <b style="color: red;">Number:</b>
+        <input type="text" id="d2">
+        <br>
+        <br>
+        <b style="color: red;">Email</b>
+        <input type="text" id="d3">
+        <br>
+        <br>
+        <b style="color: red;">Email url</b>
+        <input type="text" id="d4">
+        <br>
+        <br>
+        <button style="background-color: orange;" onclick="add()">Add card</button>
+        <div style="display: flex;flex-wrap: wrap;" id="d5"></div>
+
+    </center>
+    <script>
+        var ar=[];
+        var a=document.getElementById('d1');
+        var b=document.getElementById('d2');
+        var c=document.getElementById('d3');
+        var d=document.getElementById('d4');
+        var e=document.getElementById('d5');
+
+        function add(){
+            var obj={
+                firstname:a.value,
+                number:b.value,
+                email:c.value,
+                url:d.value
+            }
+            ar.push(obj);
+            createCard(ar);
+        }
+
+        function createCard(ar){
+            e.innerHTML="";
+            ar.forEach(person=>{
+                var card1=document.createElement('div');
+                card1.style.border="2px solid red";
+                card1.style.backgroundColor="yellow";
+                card1.style.borderRadius="4px";
+                card1.style.margin="5px";
+                card1.style.padding="5px";
+                card1.style.textAlign="center";
+
+                var namelb=document.createElement('label');
+                namelb.innerHTML="Name: ";
+                card1.appendChild(namelb);
+
+                var name1=document.createElement('span');
+                name1.innerHTML=person.firstname;
+                card1.appendChild(name1);
+
+                var newbr=document.createElement('br');
+                card1.appendChild(newbr)
+
+                var image=document.createElement('img');
+                image.src=person.url;
+                image.style.width="60px";
+                image.style.height="60px";
+                image.style.borderRadius="50%";
+                image.style.textAlign="center";
+                card1.appendChild(image);
+
+                var newbr=document.createElement('br');
+                card1.appendChild(newbr);
+
+                var contactlb=document.createElement('label');
+                contactlb.innerHTML="Contact: ";
+                card1.appendChild(contactlb);
+
+                var contact1=document.createElement('span');
+                contact1.innerHTML=person.number;
+                card1.appendChild(contact1);
+
+                var newbr=document.createElement('br');
+                card1.appendChild(newbr);
+
+                var maillb=document.createElement('label');
+                card1.appendChild(maillb);
+
+                var mail1=document.createElement('span');
+                mail1.innerHTML=person.email;
+                card1.appendChild(mail1);
+
+                e.appendChild(card1)
+
+
+
+
+                
+                
+            })
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

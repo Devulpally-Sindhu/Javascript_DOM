@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+  <center><div style="border: 1px solid;width: 150px;height: 150px;" id="d1" onclick="abc()"></div></center>
+
+  <script>
+    var ar=["red","blue","green","pink"];
+    var i=0;
+
+    var x=document.getElementById('d1');
+    x.style.backgroundColor=ar[i];
+
+    function abc(){
+        if(i===ar.length-1){
+            i=0;
+            x.style.backgroundColor=ar[i]
+        }
+        else{
+            i++
+            x.style.backgroundColor=ar[i]
+        }
+    }
+     
+  </script>
+</body>
+</html>

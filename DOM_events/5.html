@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;text-align: center;">Togggle button to show true/false</h1>
+    <center><button style="background-color: orange;" onclick="toggle()">Toggle</button></center>
+    <br>
+    <div style="text-align: center;" id="d1">false</div>
+
+    <script>
+        var x=document.getElementById('d1');
+        function toggle(){
+            if(x.innerHTML==="false"){
+                x.innerHTML="true"
+            }
+            else{
+                x.innerHTML="false"
+            }
+
+        }
+        
+    </script>
+</body>
+</html>

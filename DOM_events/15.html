@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center><h1 style="color: red;">Add Students</h1>
+        <input type="text" id="d1">
+        <button onclick="add()" style="background-color: orange;border: none;border-radius: 4px;">Add student</button><br><br>
+        <div style="display: inline-block; text-align: left;">
+            <ul id="d2"></ul>
+        </div>
+    </center>
+    <script>
+        var x = document.getElementById('d1');
+        var y = document.getElementById('d2');
+
+        var students = [];
+        function add() {
+            students.push(x.value);
+            y.innerHTML = ""
+            students.forEach(stu => {
+                var a = document.createElement('li');
+                a.innerHTML = stu;
+                y.appendChild(a)
+
+            })
+
+        }
+
+
+    </script>
+</body>
+
+</html>

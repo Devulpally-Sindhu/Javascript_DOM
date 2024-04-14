@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1 style="color: red;">Image Carousel</h1>
+        <img src="" id="d1" width="350px" height="200px">
+        <br>
+        <br>
+        <button onclick="pre()" style="margin-right: 80px;background-color: orange;">Pre</button>
+        <button onclick="next()" style="margin-left: 80px;background-color: orange;">Next</button>
+
+    </center>
+    <script>
+        var ar = ["https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg", "https://1.bp.blogspot.com/-kK7Fxm7U9o0/YN0bSIwSLvI/AAAAAAAACFk/aF4EI7XU_ashruTzTIpifBfNzb4thUivACLcBGAsYHQ/s1280/222.jpg", "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?q=10&h=200"];
+        var i=0;
+        var x=document.getElementById('d1');
+        x.src=ar[i];
+
+        function next(){
+            if(i==ar.length-1){
+                i=0;
+                x.src=ar[i]
+            }
+            else{
+                i++;
+                x.src=ar[i]
+            }
+        }
+
+        function pre(){
+            if(i==0){
+                i=ar.length-1;
+                x.src=ar[i]
+            }
+            else{
+                i--;
+                x.src=ar[i]
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

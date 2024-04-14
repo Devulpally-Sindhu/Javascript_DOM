@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1 style="color: red;">Like and Dislike button</h1></center>
+    <br>
+    <center><button onclick="like()" style="background-color: green;color: white;">Like</button></center>
+    <br>
+    <span id="d1"></span>
+    <br>
+    <center><button onclick="dislike()" style="background-color: orange;color: white;">Dislike</button></center>
+    <br>
+    <span id="d2"></span>
+
+    <script>
+        var count=0;
+        var x=document.getElementById('d1');
+        x.innerHTML=count;
+
+        function like(){
+            count++;
+            x.innerHTML=count
+        }
+
+        var count=0;
+        var y=document.getElementById('d2');
+        y.innerHTML=count;
+
+        function dislike(){
+            count--;
+            y.innerHTML=count;
+        }
+
+
+    </script>
+
+</body>
+</html>

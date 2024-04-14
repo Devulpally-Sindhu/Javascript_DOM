@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:rgb(218, 144, 118)
+        }
+    </style>
+</head>
+<body>
+    <center><h1 style="color: red;">Show images using URL</h1>
+        <label style="color: red;">Enter Image URL</label>
+        <input type="text" id="d1"><br>
+        <br>
+        <button onclick="abc()">Add Image</button>
+        <br>
+        <br>
+        <div id="d2"></div>
+
+    </center>
+
+    <script>
+        var x=document.getElementById('d1');
+        var y=document.getElementById('d2');
+       
+        
+        function abc(){
+            var newimg=document.createElement('img');
+            newimg.src=x.value;
+            newimg.style.width="200px";
+            newimg.style.margin="20px"
+            y.appendChild(newimg)
+        }
+        
+    </script>
+</body>
+</html>
