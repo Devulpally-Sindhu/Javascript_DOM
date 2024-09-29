@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var x=prompt();
+        // var y=document.createElement('h1');
+        // if((x.length)%2==0){
+        //     y.style.color="green"
+        // }
+        // else{
+        //     y.style.color="red"
+        // }
+        // y.innerHTML=x;
+        // document.body.appendChild(y)
+
+        var ar=[19,34,89,53,91,23,44];
+        ar.forEach(a=>{
+            var x=document.createElement('li');
+            if(a%2==0){
+                x.style.color="green"
+            }
+            else{
+                x.style.color="red"
+            }
+            x.innerHTML=a;
+            document.body.appendChild(x)
+        })
+
+
+        
+    </script>
+</body>
+</html>

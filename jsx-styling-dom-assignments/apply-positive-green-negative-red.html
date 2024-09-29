@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x=+prompt("enter a number");
+        var y=document.createElement('h1');
+        if(x>0){
+            y.style.color="green"
+        }
+        else{
+            y.style.color="red"
+        }
+        y.innerHTML=x;
+        
+        document.body.appendChild(y)
+    </script>
+</body>
+</html>

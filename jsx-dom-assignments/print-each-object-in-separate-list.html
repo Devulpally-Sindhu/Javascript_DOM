@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="d1"></ul>
+    <ul id="d2"></ul>
+    <ul id="d3"></ul>
+    <script>
+        var family={
+            "firstname":"sindhu",
+            "lastname":"devulpally",
+            "age":30
+        }
+
+        var family1={
+            "firstname":"kerrthi",
+            "lastname":"devulpally",
+            "age":35
+        }
+
+        var family2={
+            "firstname":"amma",
+            "lastname":"devulpally",
+            "age":50
+        }
+        for(var x in family){
+            var a=document.createElement('li');
+            a.innerHTML=family[x];
+            document.getElementById('d1').appendChild(a)
+        }
+
+        for(var x in family1){
+            var a=document.createElement('li');
+            a.innerHTML=family1[x];
+            document.getElementById('d2').appendChild(a)
+        }
+
+        for(var x in family2){
+            var a=document.createElement('li');
+            a.innerHTML=family2[x];
+            document.getElementById('d3').appendChild(a)
+        }
+    </script>
+</body>
+</html>

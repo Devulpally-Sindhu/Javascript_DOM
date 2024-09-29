@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="post" onsubmit="xyz(event)">
+        <input type="text" name="firstname">
+        <br>
+        <input type="text" name="age">
+        <br>
+        <input type="radio" name="gender" value="female"> Female:
+        <input type="radio" name="gender" value="male"> Male:
+        <input type="radio" name="gender" value="others"> Others:
+        <br>
+        <input type="checkbox" name="tech" value="ts"> Typescript:
+        <input type="checkbox" name="tech" value="js"> Javascript:
+        <input type="checkbox" name="tech" value="css"> css:
+        <input type="checkbox" name="tech" value="html"> HTML:
+        <br>
+        <button>Submit</button>
+        <br>
+        <br>
+        <div id="d1" style="border: 1px solid;height: 150px;width: 50%;"></div>
+
+        <!-- <button type="button">Submit</button> -->
+        <!-- button ki onclick eventListner rasina rayakapoyna submit avutundi apudhu ante form tag ki onsubmit ane eventListner unnappudhu
+        form submit avakudadu ante button ki <button type="button" ani rayali raste form submit avadu
+        default behaviour of button is submit button -->
+
+    </form>
+
+    <script>
+        // function abc(){
+        //     alert("hello")
+        // }
+
+        function xyz(ev){
+            // console.dir(ev.preventDefault()); preventDefault ndukante event jaragali kani form submit avakudadu
+            ev.preventDefault();
+            var x=new FormData(ev.target);
+            // console.log(x)
+            // var y=x.values();
+            // // console.log(y) //this will gives iterator function
+            // for(var a of y){
+            //     console.log(a) //the output will be values
+            // }
+
+            // var z=x.keys();
+            // for(var a of z){
+            //     console.log(a) //the output will be keys
+            // }
+            
+            // var z=x.entries();
+            // for(var a of z){
+            //     console.log(a)
+            // } //the output will be for element key and values
+
+            // var s={};
+            // var z=x.entries();
+            // for(var a of z){
+            //     s[a[0]]=a[1];
+            // } 
+            // console.log(s) //create oject for input fileds and radio buttons
+
+            // var s={};
+            // var z=x.keys();
+            // for(var a of z){
+            //     s[a]=x.getAll(a).length==1?x.get(a):x.getAll(a);
+            // } 
+            // console.log(s) //create oject for all input fileds include the checkboxes and radio buttons
+
+            var s={};
+            var ar=[];
+            var z=x.keys();
+            for(var a of z){
+                s[a]=x.getAll(a).length==1?x.get(a):x.getAll(a);     
+            }
+            ar.push(s);
+           ar.forEach(k=>{
+            document.getElementById('d1').innerHTML="";
+            var k1=document.createElement('li');
+            k1.innerHTML=k.firstname;
+            document.getElementById('d1').appendChild(k1)
+            var k2=document.createElement('li');
+            k2.innerHTML=k.age;
+            document.getElementById('d1').appendChild(k2)
+            var k3=document.createElement('li');
+            k3.innerHTML=k.gender;
+            document.getElementById('d1').appendChild(k3);
+            var k4=document.createElement('li');
+            k4.innerHTML=k.tech;
+            document.getElementById('d1').appendChild(k4)
+           })
+        }
+        
+
+            
+              
+
+
+    </script>
+</body>
+
+</html>

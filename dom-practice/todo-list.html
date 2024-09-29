@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <title>TO DO LIST</title>
+</head>
+<body class="bg-muted">
+    <div class="container shadow-lg mt-5 card p-3" style="width: 550px;height: 600px;">
+        <h3 class="text-center h2 font-weight-bold">To Do List</h3>
+        <div class=" m-3 d-flex align-items-center justify-content-center" id="header">
+                <input class="rounded rounded-2" id="input" style="margin:10px" type="text" placeholder="Enter the task here" />
+                <button id="updateBtn" class="btn btn-warning text-dark pt-1 pb-1" style="display: none;height: 30px;" onclick="updatelist(event)">Save edit</button>
+                <button id="addBtn" class="btn btn-primary text-white pt-1 pb-1" style="height: 30px;" onclick="addtolist(event)">Add to List</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td scope="col" class="col-1">No.</td>
+                    <td scope="col" class="col-3">Todo Item</td>
+                    <td scope="col" class="col-3">Status</td>
+                    <td scope="col" class="col-5">Actions</td>
+                </tr>
+            </thead>
+            <tbody class=""  id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var listindex;
+        var list=[];
+        function addtolist(e){
+            if(document.getElementById("input").value!=="")
+                {   
+                    var listobj={
+                    task:document.getElementById("input").value,
+                    isdone:false,
+                }
+                list.push(listobj)
+                document.getElementById("input").value="";
+                genUI()
+                }
+        }
+        function genUI(){
+            console.log("list",list);
+            
+            var main=document.getElementById("tbody")
+            main.innerHTML=""
+            for(let i=0;i<list.length;i++){
+                var nrow=document.createElement("tr")
+                var indtd=document.createElement("td")
+                var tasktd=document.createElement("td")
+                var statustd=document.createElement("td")
+                var buttontd=document.createElement("td")
+                var doneBtn=document.createElement("button")
+                var editBtn=document.createElement("button")
+                var undoBtn=document.createElement("button")
+                var delBtn=document.createElement("button")
+                
+                indtd.innerHTML=i+1
+
+                tasktd.innerHTML=list[i].task
+                doneBtn.innerHTML="Done"
+                doneBtn.className="me-1 pt-1 pb-1 text-white btn btn-success"
+                doneBtn.onclick=function(){
+                    console.log(list,i);
+                    
+                    list[i].isdone=true
+                    genUI()
+                }
+                undoBtn.innerHTML="Undo"
+                undoBtn.className="me-1 pt-1 pb-1 text-white btn btn-success"
+                undoBtn.onclick=function(){
+                    list[i].isdone=false
+                    genUI()
+                }
+
+                delBtn.innerHTML="Delete"
+                delBtn.className="me-1 pt-1 pb-1 text-white btn btn-danger"
+                delBtn.onclick=function(){
+                    list.splice(i,1)
+                    genUI()
+                }
+                editBtn.innerHTML="Edit"
+                editBtn.className="me-1 pt-1 pb-1 text-white btn btn-danger"
+                editBtn.onclick=function(){
+                    document.getElementById("input").value=list[i].task
+                    listindex=i
+                    document.getElementById("addBtn").style.display="none"
+                    document.getElementById("updateBtn").style.display="block"
+                }
+                doneBtn.style.width="40%"
+                editBtn.style.width="40%"
+                undoBtn.style.width="40%"
+                delBtn.style.width="40%"
+                if(list[i].isdone){
+                    statustd.innerHTML="Completed"
+                    tasktd.style.textDecoration="line-through"
+                    tasktd.style.color="red"
+                    doneBtn.style.display="none"
+                    editBtn.style.display="none"
+                    undoBtn.style.display="block"
+                    delBtn.style.display="block"
+                    
+                }
+                else{
+                    statustd.innerHTML="Not Completed"
+                    tasktd.style.textDecoration="none"
+                    tasktd.style.color="black"
+                    doneBtn.style.display="block"
+                    editBtn.style.display="block"
+                    undoBtn.style.display="none"
+                    delBtn.style.display="none"
+                    
+                }
+                buttontd.style.display="flex"
+                buttontd.appendChild(doneBtn)
+                buttontd.appendChild(undoBtn)
+                buttontd.appendChild(editBtn)
+                buttontd.appendChild(delBtn)
+                nrow.appendChild(indtd)
+                nrow.appendChild(tasktd)
+                nrow.appendChild(statustd)
+                nrow.appendChild(buttontd)
+                main.appendChild(nrow)
+            }
+        }
+
+        function updatelist(e){
+            list[listindex].task=document.getElementById("input").value;
+            document.getElementById("input").value="";
+            document.getElementById("addBtn").style.display="block"
+            document.getElementById("updateBtn").style.display="none"
+            genUI()
+        }
+    </script>
+</body>
+</html>

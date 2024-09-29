@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="radio" name="gender" value="female">:Female
+    <input type="radio" name="gender" value="male">:Male
+    <input type="radio" name="gender" value="others">:Others
+    <br>
+    <button onclick="add()">Show gender</button>
+    <div id="d2"></div> -->
+
+
+    <input type="radio" name="gender" value="female" onchange="abc(event)">:Female
+    <input type="radio" name="gender" value="male" onchange="abc(event)">:Male
+    <input type="radio" name="gender" value="others" onchange="abc(event)">:Others
+    <br>
+    <h1 id="d2"></h1>
+
+    <!-- <h1 id="d1"></h1> -->
+
+    <script>
+        // function add() {
+        //     var x = document.getElementsByName('gender');
+        //     x.forEach(function (a) {
+        //         if (a.checked == true) {
+        //             var y=document.createElement('h1');
+        //             y.innerHTML=a.value;
+        //             document.getElementById('d2').appendChild(y);
+                    
+        //             // document.getElementById('d1').innerHTML=a.value;
+        //         }
+        //     })
+        // }
+
+
+        //another way of writing with onchange
+
+        function abc(ev){
+            document.getElementById('d2').innerHTML=ev.target.value;
+        }
+    </script>
+</body>
+
+</html>

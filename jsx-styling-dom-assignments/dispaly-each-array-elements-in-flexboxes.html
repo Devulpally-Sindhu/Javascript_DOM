@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex;">
+    <style>
+      
+    </style>
+    
+    <script>
+        var x=[12,34,90,45];
+        x.forEach(a=>{
+            var a1=document.createElement('div');
+            a1.innerHTML=a;
+            a1.style.width='50px';
+            a1.style.height='50px';
+            a1.style.marginLeft='10px';
+            a1.style.border="2px solid";
+            a1.style.paddingTop="30px"
+            a1.style.paddingLeft="35px"
+            document.body.appendChild(a1);
+            
+        })
+        
+    </script>
+</body>
+</html>

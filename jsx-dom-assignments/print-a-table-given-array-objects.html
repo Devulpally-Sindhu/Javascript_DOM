@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="d1" border="2">
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+    </table>
+    <script>
+        var students = [
+        {
+          firstname:"Praveen",
+          lastname:"Gubbala",
+          age:40
+        },
+        {
+          firstname:"Rohit",
+          lastname:"Sharma",
+          age:35
+        },
+        {
+          firstname:"Sachin",
+          lastname:"Tendulkar",
+          age:50
+        },
+    ]
+
+    students.forEach(a=>{
+        var tr=document.createElement('tr');
+
+        var td1=document.createElement('td');
+        td1.innerHTML=a.firstname;
+        tr.appendChild(td1);
+
+        var td2=document.createElement('td');
+        td2.innerHTML=a.lastname;
+        tr.appendChild(td2);
+
+        var td3=document.createElement('td');
+        td3.innerHTML=a.age;
+        tr.appendChild(td3);
+
+        document.getElementById('d1').appendChild(tr)
+    })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"></div>
+    <script>
+        var a=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCfFHoZzWfdtNK5XeuJ_X4UYty_T-zM-b5Eg&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiu9BVPLXAuwSTOmu2J91FjOJOvNP3dc-_iQ&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROcR86mZrH_SNF58qBHRVew2Q7i363r7EjlA&s"
+        ]
+        a.forEach(a=>{
+            var x=document.createElement('img');
+            x.src=a;
+            x.style.margin="5px"
+            document.getElementById('d1').appendChild(x)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="d1">
+    <br>
+    <input type="text" id="d2">
+    <br>
+    <button onclick="add()">Add</button>
+    <br>
+    <b id="d3"></b>
+    <script>
+
+        // add numers in the input fileds
+
+        function add(){
+            // var x=document.getElementById('d1');
+            // var y=document.getElementById('d2');
+            // console.log(parseInt(x.value)+parseInt(y.value))
+
+            // var x=+document.getElementById('d1').value;
+            // var y=+document.getElementById('d2').value;
+            // console.log(x+y)
+
+            var x=+document.getElementById('d1').value;
+            var y=+document.getElementById('d2').value;
+            var z=x+y;
+            document.getElementById('d3').innerHTML=z;
+
+        }
+
+    </script>
+</body>
+</html>

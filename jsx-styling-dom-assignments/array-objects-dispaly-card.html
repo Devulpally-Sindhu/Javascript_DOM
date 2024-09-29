@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="display:flex; flex-wrap: wrap;">
+    <script>
+        var students = [
+            {
+                firstname: "Praveen",
+                lastname: "Gubbala",
+                age: 40,
+                gender: "male"
+            },
+            {
+                firstname: "Smrithi",
+                lastname: "mandana",
+                age: 25,
+                gender: 'female'
+            },
+            {
+                firstname: "mithali",
+                lastname: "raj",
+                age: 39,
+                gender: 'female'
+            },
+            {
+                firstname: "Rohit",
+                lastname: "Sharma",
+                age: 35,
+                gender: 'male'
+            },
+            {
+                firstname: "Sachin",
+                lastname: "Tendulkar",
+                age: 50,
+                gender: 'male'
+            },
+        ]
+
+        students.forEach(a => {
+            var x = document.createElement('div');
+            x.style.border = "2px solid";
+            x.style.height = "250px";
+            x.style.width = "250px"
+            x.style.marginBottom = "10px"
+            x.style.marginLeft = "10px";
+            x.style.paddingLeft = "30px";
+
+            var x1 = document.createElement('h1');
+            x1.innerHTML = a.firstname;
+            x.appendChild(x1);
+
+            var x2 = document.createElement('h1');
+            x2.innerHTML = a.lastname;
+            x.appendChild(x2);
+
+            var x3 = document.createElement('h1');
+            x3.innerHTML = a.age;
+            x.appendChild(x3);
+
+            var x4 = document.createElement('h1');
+            if (a.gender == "male") {
+                x.style.backgroundColor="blue"                
+            }
+            else{
+                x.style.backgroundColor="green"
+            }
+
+            x4.innerHTML = a.gender;
+                x.appendChild(x4);
+
+            document.body.appendChild(x)
+
+
+        })
+    </script>
+</body>
+
+</html>

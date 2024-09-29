@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="checkbox" name="tech" value="angular"> : Angular
+    <input type="checkbox" name="tech" value="react"> : React
+    <input type="checkbox" name="tech" value="node">: Node
+    <br>
+    <input type="checkbox" name="tech" value="express">: Express
+    <input type="checkbox" name="tech" value="html">: Html
+    <input type="checkbox" name="tech" value="css">: css
+    <input type="checkbox" name="tech" value="javascript">: Javascript
+    <br>
+    <button onclick="show()">Show Tech</button>
+
+    <ul id="d1"></ul> -->
+
+    <input type="checkbox" name="tech" value="angular" onchange="abc(event)"> : Angular
+    <input type="checkbox" name="tech" value="react" onchange="abc(event)"> : React
+    <input type="checkbox" name="tech" value="node" onchange="abc(event)">: Node
+    <br>
+    <input type="checkbox" name="tech" value="express" onchange="abc(event)">: Express
+    <input type="checkbox" name="tech" value="html" onchange="abc(event)">: Html
+    <input type="checkbox" name="tech" value="css" onchange="abc(event)">: css
+    <input type="checkbox" name="tech" value="javascript" onchange="abc(event)">: Javascript
+    <br>
+    <ul id="d1"></ul>
+
+
+    <script>
+
+        // using onclick event listner
+
+      /*  function show(){
+            document.getElementById('d1').innerHTML="";
+            var x=document.getElementsByName('tech');
+            x.forEach(function(a){
+                if(a.checked==true){
+                    var y=document.createElement('li');
+                    y.innerHTML=a.value;
+                    document.getElementById('d1').appendChild(y)
+                }
+            })
+        }*/
+
+        //using onchange eventlistner
+
+        function abc(ev){
+                var y=document.createElement('li');
+                y.innerHTML=ev.target.value;
+                document.getElementById('d1').appendChild(y)
+        }
+    </script>
+</body>
+</html>

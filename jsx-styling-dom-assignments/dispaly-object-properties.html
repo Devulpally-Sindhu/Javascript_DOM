@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="d1" style="border:2px solid;height: 200px;"></div> -->
+    <script>
+        var students={
+            "firstname":"sindhu",
+            "lastname":"devulpally",
+            "age":30
+        }
+        for(var x in students){ 
+            var a1=document.createElement('div');
+            a1.style.border="2px solid";
+            a1.style.height="150px";
+            a1.style.margin="10px";
+            a1.style.paddingLeft="15px"
+
+            var a=document.createElement('h1');
+            a.innerHTML="Firstname"+":"+students.firstname;
+            a1.appendChild(a)
+
+            var b=document.createElement('h4');
+            b.innerHTML="Lastname"+":"+students.lastname;
+            a1.appendChild(b);
+
+            var c=document.createElement('i');
+            c.innerHTML="Age"+":"+students.age;
+            a1.appendChild(c)
+        }
+        document.body.appendChild(a1)        
+
+
+    </script>
+</body>
+</html>
